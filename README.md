@@ -6,6 +6,6 @@ A Nodejs application (build with TypeScript) to forecast your account balance, b
 
 1. `npm install`
 2. `mv transactions.example.js transactions.js`
-3. Enter youe transactions in to transactions.js
+3. Enter your transactions in to transactions.js
 4. Set your opening balance in app.js
 4. Run `node app`
