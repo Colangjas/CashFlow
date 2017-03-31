@@ -1,6 +1,6 @@
 ### What is it?
 
-A Nodejs application (build with TypeScript) to forecast your account balance, based on repeating transactions, between 2 dates.
+A Nodejs application (built with TypeScript) to forecast your account balance, based on repeating transactions, between 2 dates.
 
 ### How to use
 
