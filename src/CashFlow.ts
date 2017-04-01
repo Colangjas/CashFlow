@@ -1,6 +1,6 @@
-var _ = require('lodash')
-var moment = require('moment')
-var numeral = require('numeral')
+const _ = require('lodash')
+const moment = require('moment')
+const numeral = require('numeral')
 
 import { Account, Transaction } from './entities'
 import { TransactionScheduler } from './jobs'
@@ -17,7 +17,7 @@ class CashFlow {
 	static createAccount(name: string, openingBalance: number): Account {
 		CashFlow.accounts = CashFlow.accounts || []
 
-		var account = new Account(name, openingBalance)
+		const account = new Account(name, openingBalance)
 		CashFlow.accounts.push(account)
 
 		return account
@@ -29,7 +29,7 @@ class CashFlow {
 
 	static importAccountTransactions(account: Account, transactions: Array<object>) {
 		transactions = _.map(transactions, (transaction) => {
-			let transaction = new Transaction(
+			const transaction = new Transaction(
 				transaction.name,
 				transaction.amount,
 				transaction.date,
@@ -45,7 +45,7 @@ class CashFlow {
 	}
 
 	static addAccountTransaction(account: Account, transaction: object) {
-		let transaction = new Transaction(
+		const transaction = new Transaction(
 			transaction.name,
 			transaction.amount,
 			transaction.date,
@@ -58,7 +58,7 @@ class CashFlow {
 	}
 
 	static accountProjection(account: Account, from: any, to: any) {
-		var projection = new Projection(account)
+		const projection = new Projection(account)
 		
 		CashFlow.scheduleAccountTransactions(account, to);
 
@@ -69,9 +69,9 @@ class CashFlow {
 	}
 
 	static scheduleAccountTransactions(account: Account, to: any) {
-		var transactionScheduler = new TransactionScheduler
+		const transactionScheduler = new TransactionScheduler
 		
-		var repeatedTransactions = transactionScheduler.scheduleManyUpto(
+		const repeatedTransactions = transactionScheduler.scheduleManyUpto(
 			account.getTransactions(), 
 			to
 		)
