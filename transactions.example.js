@@ -19,7 +19,7 @@ module.exports = [
 	},
 	{
 		name: 'Amazon Prime',
-		amount: 79,
+		amount: -79,
 		date: '2017-10-01',
 		repeat: 4
 	},
