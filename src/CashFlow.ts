@@ -62,10 +62,10 @@ class CashFlow {
 		
 		CashFlow.scheduleAccountTransactions(account, to);
 
-		console.log(projection.between(
+		return projection.between(
 			from, 
 			to
-		))
+		)
 	}
 
 	static scheduleAccountTransactions(account: Account, to: any) {

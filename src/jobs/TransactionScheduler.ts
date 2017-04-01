@@ -36,7 +36,7 @@ export class TransactionScheduler {
 					this.createRepeatedTransactions(1, 'months', end)
 				break;
 			case Repeatable.QUARTERLY:
-					this.createRepeatedTransactions(4, 'months', end)
+					this.createRepeatedTransactions(3, 'months', end)
 				break;
 		}
 	}

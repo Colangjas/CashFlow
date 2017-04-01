@@ -35,4 +35,10 @@ export class Account {
 	getTransactions(): Array<any> {
 		return this.transactions
 	}
+
+	clearTransactions(): Account {
+		this.transactions = []
+
+		return this
+	}
 }
